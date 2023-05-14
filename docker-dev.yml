@@ -1,0 +1,43 @@
+version: '3.9'
+name: 'webgpt'
+services:
+  backend:
+    build:
+      context: ./
+      dockerfile: ./backend/Dockerfile
+    container_name: backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - './backend/:/backend/'
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    container_name: post_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+  # frontend:
+  #   build: ./frontend
+  #   container_name: frontend
+  #   volumes:
+  #     - ./frontend:/frontend
+  #     - /frontend/node_modules
+  #   environment:
+  #     - CHOKIDAR_USEPOLLING=True
+  #   ports:
+  #     - 3000:3000
+  # nginx:
+  #   build: ./nginx
+  #   container_name: nginx
+  #   ports:
+  #     - '80:80'
+  #     - '443:443'
+
+volumes:
+  postgres_data:
