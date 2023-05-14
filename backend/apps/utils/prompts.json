@@ -1,0 +1,34 @@
+{
+  "role": {
+    "translator": "You are a translator.",
+    "polish": "You are a English writing improver.",
+    "rewriter": "You are required to rewrite text.",
+    "research assistant": ""
+  },
+  "task": {
+    "translate_cn": "Your task is to translate the text into Chinese. If the text cannot be translated, reply 'Translation failed.' Here is an example:\nText: ```What is your name?```\nReply: 你的名字是什么？",
+    "translate_en": "Your task is to translate the text into English. If the text cannot be translated, reply 'Translation failed.' Here is an example:\nText: ```你的名字是什么？```\nReply: What is your name?",
+    "polish": "Yout task is to polish the given text. You should correct the typos and grammar mistakes and make the text clear. You should only reply the polished text, without any marks or explanations.",
+    "polish_latex": "Yout task is to polish the given text in latex format. You should correct the typos and grammar mistakes and make the text clear. You should only reply the polished text, without any marks or explanations.",
+    "continuation": "",
+    "email": "",
+    "rewrite": "I will provide you with a piece of text and a some requirements, you should rewrite the text to satisfy the requirements.",
+    "summary": ""
+  },
+  "mood": {
+    "engaging": "",
+    "warm": ""
+  },
+  "genre": {
+    "professional": "I want you to be professional, and replace the simple words and sentences with more beautiful and elegant, upper level English words and sentences. Keep the meaning same, but make them more literary.",
+    "strict": "You should be precise and clear.",
+    "keep": "Keep the original words phrase as more as possible."
+  },
+  "output": {
+    "text": "",
+    "html": "Please reply in html format.",
+    "json": "",
+    "latex": "Please reply in latex format."
+  },
+  "suffix": "The text is provided below, delimited in triple backticks. Text: ```"
+}
